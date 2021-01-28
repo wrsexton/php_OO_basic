@@ -2,10 +2,11 @@
 
 abstract class Animal
 {
-    abstract protected function speak();
+    abstract public function speak();
 
-    public function isAnimal() {
-        return True;
+    public function isAnimal()
+    {
+        return true;
     }
 }
 
