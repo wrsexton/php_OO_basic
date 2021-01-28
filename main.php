@@ -1,9 +1,9 @@
 <?php
 
-include_once(__DIR__ . "/cat.php");
-include_once(__DIR__ . "/dog.php");
-include_once(__DIR__ . "/blender.php");
-include_once(__DIR__ . "/microwave.php");
+include_once(__DIR__ . "/animals/cat.php");
+include_once(__DIR__ . "/animals/dog.php");
+include_once(__DIR__ . "/machines/blender.php");
+include_once(__DIR__ . "/machines/microwave.php");
 
 $dog = new Dog("Max the Dog");
 $cat = new Cat("Snarf the Cat");
