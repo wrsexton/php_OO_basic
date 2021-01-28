@@ -19,3 +19,12 @@ abstract class Animal
 
 }
 
+abstract class Reptile extends Animal
+{
+    public $has_legs;
+}
+
+abstract class Mammal extends Animal
+{
+    public $is_aquatic;
+}

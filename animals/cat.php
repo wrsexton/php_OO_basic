@@ -2,11 +2,12 @@
 
 include_once(__DIR__ . "/animal.php");
 
-class Cat extends Animal
+class Cat extends Mammal
 {
     function __construct($name)
     {
         echo "Constructing Cat\n";
+        $this->is_aquatic = False;
         parent::__construct($name);
     }
 
