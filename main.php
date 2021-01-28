@@ -1,20 +1,30 @@
 <?php
 
-include_once(dirname(__FILE__) . "/cat.php");
-include_once(dirname(__FILE__) . "/dog.php");
+include_once(__DIR__ . "/cat.php");
+include_once(__DIR__ . "/dog.php");
+include_once(__DIR__ . "/blender.php");
+include_once(__DIR__ . "/microwave.php");
 
 $dog = new Dog("Max the Dog");
 $cat = new Cat("Snarf the Cat");
-$animal_arr = [$dog, $cat, "Test", 1, 2, 3];
+$blender = new Blender();
+$microwave = new Microwave();
+$arr = [$dog, $cat, $blender, $microwave];
 
 echo "\n--- For Each Loop ---\n\n";
 
-foreach ($animal_arr as $animal) {
-    if (!$animal instanceof Animal) {
+foreach ($arr as $object) {
+    if ($object instanceof Animal) {
+        echo $object->getName() . ": ";
+        $object->speak();
         continue;
     }
-    echo $animal->getName() . ": ";
-    $animal->speak();
+
+    if ($object instanceof Machine) {
+        $object->makeNoise();
+        continue;
+    }
+
 }
 
 
