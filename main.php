@@ -8,8 +8,13 @@ $cat = new Cat;
 $animal_arr = [$dog, $cat];
 
 foreach ($animal_arr as $animal) {
-    if ($animal . isAnimal()) {
-        $animal . speak();
+    if (!is_subclass_of($animal, "Animal")) {
+        continue;
+    }
+    if($animal->isAnimal()) {
+        $animal->speak();
+        echo "\n";
     }
 }
+
 
