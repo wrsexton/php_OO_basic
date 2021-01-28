@@ -8,7 +8,7 @@ $cat = new Cat;
 $animal_arr = [$dog, $cat, "Test", 1, 2, 3];
 
 foreach ($animal_arr as $animal) {
-    if (!is_subclass_of($animal, "Animal")) {
+    if (!$animal instanceof Animal) {
         continue;
     }
     $animal->speak();
