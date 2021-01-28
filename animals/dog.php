@@ -4,6 +4,8 @@ include_once(__DIR__ . "/animal.php");
 
 class Dog extends Mammal
 {
+    use Pet;
+
     function __construct($name)
     {
         echo "Constructing Dog\n";

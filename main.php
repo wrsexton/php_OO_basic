@@ -23,6 +23,10 @@ foreach ($arr as $object) {
         echo $object->getName() . ": ";
         $object->speak();
 
+        if(in_array("Pet", class_uses($object))){
+            echo $object->bellyrub();
+        }
+
         if ($object instanceof Reptile) {
             echo "This Reptile " . (($object->has_legs) ? "has legs!\n" : "doesn't have legs!\n");
             continue;

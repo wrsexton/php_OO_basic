@@ -28,3 +28,11 @@ abstract class Mammal extends Animal
 {
     public $is_aquatic;
 }
+
+trait Pet
+{
+    public function bellyrub()
+    {
+        echo "This one loves belly rubs!\n";
+    }
+}
