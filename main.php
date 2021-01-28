@@ -24,7 +24,7 @@ foreach ($arr as $object) {
         $object->speak();
 
         if(in_array("Pet", class_uses($object))){
-            echo $object->bellyrub();
+            $object->bellyrub();
         }
 
         if ($object instanceof Reptile) {
