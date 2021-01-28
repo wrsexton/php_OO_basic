@@ -11,10 +11,8 @@ foreach ($animal_arr as $animal) {
     if (!is_subclass_of($animal, "Animal")) {
         continue;
     }
-    if ($animal->isAnimal()) {
-        $animal->speak();
-        echo "\n";
-    }
+    $animal->speak();
+    echo "\n";
 }
 
 
